@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
   web:
@@ -8,9 +8,9 @@ services:
     volumes:
         - ../pagina-web:/usr/share/nginx/html
         - ./site.conf:/etc/nginx/conf.d/site.conf
-    links:
+    depends_on:
         - php
   php:
     image: php:7-fpm
     volumes:
-        - ./pagina-web:/usr/share/nginx/html
+        - ../pagina-web:/usr/share/nginx/html

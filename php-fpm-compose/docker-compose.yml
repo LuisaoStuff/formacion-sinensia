@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+        - "8080:80"
+    volumes:
+        - ../pagina-web:/usr/share/nginx/html
+        - ./site.conf:/etc/nginx/conf.d/site.conf
+    links:
+        - php
+  php:
+    image: php:7-fpm
+    volumes:
+        - ./pagina-web:/usr/share/nginx/html

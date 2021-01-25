@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  hello-world:
+    container_name: hello-world
+    build: .
+    image: prueba-java-2
+    ports:
+      - 80:8080
+

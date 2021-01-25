@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  hello-world:
+    container_name: java-springboot
+    build: .
+    image: prueba-java:automate.16
+    ports:
+      - 80:8080
+

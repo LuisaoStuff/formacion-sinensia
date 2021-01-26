@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  nodejs:
+    build: .
+    image: prueba-node:brunch
+    ports:
+      - 80:80
+

@@ -2,7 +2,8 @@ version: '3'
 
 services:
   nodejs:
-    image: prueba-node:v1
+    build: .
+    image: prueba-node:yarn
     ports:
       - 80:80
 

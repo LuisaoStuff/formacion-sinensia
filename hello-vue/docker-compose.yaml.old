@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  nodejs:
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - /home/viewadmin/.nodenv/hello-vue/dist/:/usr/share/nginx/html
+
